@@ -1,0 +1,1 @@
+# SP-Flash-Tool.AppImage
