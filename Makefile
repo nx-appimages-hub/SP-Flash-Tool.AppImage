@@ -29,8 +29,7 @@ all:
 	chmod +x AppDir/opt/application/flash_tool
 	chmod +x AppDir/AppRun
 
-	export ARCH=x86_64 && appimagetool AppDir $(OUTPUT)
-
+	export ARCH=x86_64 && bin/appimagetool.AppImage AppDir $(OUTPUT)
 	chmod +x $(OUTPUT)
 
 	rm -rf SP_Flash_Tool-5.1916_Linux
