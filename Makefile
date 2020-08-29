@@ -19,10 +19,10 @@ all:
 	unzip $(DESTINATION) -d ./
 	dpkg -x libpng12.deb libpng12
 
-	cp -r SP_Flash_Tool-5.1916_Linux/lib/* AppDir/lib
-	rm -rf SP_Flash_Tool-5.1916_Linux/lib
-	cp -r SP_Flash_Tool-5.1916_Linux/*.so AppDir/lib
-	cp -r SP_Flash_Tool-5.1916_Linux/* AppDir/opt/application
+	cp -r SP_Flash_Tool-*_Linux/lib/* AppDir/lib
+	rm -rf SP_Flash_Tool-*_Linux/lib
+	cp -r SP_Flash_Tool-*_Linux/*.so AppDir/lib
+	cp -r SP_Flash_Tool-*_Linux/* AppDir/opt/application
 	cp -r libpng12/lib/x86_64-linux-gnu/* AppDir/lib
 
 	chmod +x AppDir/opt/application/flash_tool.sh
@@ -32,7 +32,7 @@ all:
 	export ARCH=x86_64 && bin/appimagetool.AppImage AppDir $(OUTPUT)
 	chmod +x $(OUTPUT)
 
-	rm -rf SP_Flash_Tool-5.1916_Linux
+	rm -rf SP_Flash_Tool-*_Linux
 	rm -f $(DESTINATION)
 	rm -rf AppDir/lib
 	rm -rf AppDir/opt
